@@ -21,7 +21,7 @@ type FilterOptions struct {
 	Filter    map[string][]string
 }
 
-func (fo *FilterOptions) AddFilter(key string, value interface{}) {
+func (fo *FilterOptions) AddFilter(key string, value string) {
 	if fo.Filter == nil {
 		fo.Filter = map[string][]string{}
 	}
@@ -30,7 +30,7 @@ func (fo *FilterOptions) AddFilter(key string, value interface{}) {
 		fo.Filter[key] = append(fo.Filter[key], value)
 		return
 	}
-	fo.Filter[key] = []interface{}{value}
+	fo.Filter[key] = []string{value}
 }
 
 func ParseFilterOptionsFromHttpRequest(r *http.Request) (FilterOptions, error) {
