@@ -75,7 +75,7 @@ func DefaultFilterOptions() FilterOptions {
 		Limit:     DEFAULT_RESULT_SIZE,
 		SortBy:    DEFAULT_SORT_BY,
 		SortOrder: DEFAULT_SORT_ORDER,
-		Filter:    map[string][]interface{}{},
+		Filter:    map[string][]string{},
 	}
 }
 
