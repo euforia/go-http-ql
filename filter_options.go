@@ -18,12 +18,12 @@ type FilterOptions struct {
 	Limit     int
 	SortBy    string
 	SortOrder string
-	Filter    map[string][]interface{}
+	Filter    map[string][]string
 }
 
 func (fo *FilterOptions) AddFilter(key string, value interface{}) {
 	if fo.Filter == nil {
-		fo.Filter = map[string][]interface{}{}
+		fo.Filter = map[string][]string{}
 	}
 
 	if _, ok := fo.Filter[key]; ok {
