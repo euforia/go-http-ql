@@ -79,6 +79,7 @@ func DefaultFilterOptions() FilterOptions {
 	}
 }
 
+// Parse sort by and sort order seting defaults where necessary.
 func parseSortOptions(sortOpts string) (by, order string, err error) {
 
 	sbo := strings.Split(sortOpts, ":")
